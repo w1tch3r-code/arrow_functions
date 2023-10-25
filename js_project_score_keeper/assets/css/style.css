@@ -1,0 +1,214 @@
+@charset "UTF-8";
+
+/* ========================================================== 
+                            Resets
+========================================================== */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+/* ========================================================== 
+                        Image Links
+========================================================== */
+
+/* https://source.unsplash.com/random?night sky */
+/* https://source.unsplash.com/random/?Cryptocurrency&1 */
+/* https://picsum.photos/300/300?random=1 */
+
+/* ========================================================== 
+                            Fonts
+========================================================== */
+
+@font-face {
+	font-family: 'Lato';
+	src: url('./../fonts/Lato-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'Orbitron';
+	src: url('./../fonts/Orbitron-VariableFont_wght.ttf');
+}
+
+/* ========================================================== 
+                Variables / Custom Properties
+========================================================== */
+
+/* ========================================================== 
+                            Body
+========================================================== */
+
+body {
+	font-family: 'Lato';
+	background-color: #2C2C2C;
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+}
+
+.wrapper {
+	position: relative;
+    max-width: 1280px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-block: 10vh;
+}
+
+.score__keeper__wrapper {
+    padding-block: 60px;
+    padding-inline: 165px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 140px;
+}
+
+/* ========================================================== 
+                            Content
+========================================================== */
+
+.overlay {
+	position: absolute;
+    background-color: rgb(0 0 0 / 92%);
+    top: 10vh;
+    left: 0;
+    right: 0;
+    bottom: 10vh;
+    width: 100%;
+    z-index: 1;
+    border-radius: 20px;
+    margin: 0 auto;
+    margin-block: -2vh;
+	transition: all 1s ease-in-out;
+}
+
+svg {
+	position: absolute;
+	top: 2%;
+	right: 2%;
+	cursor: pointer;
+	fill: #fdf860
+}
+
+form {
+	display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    color: white;
+    position: absolute;
+    top: 16vh;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    row-gap: 50px;
+}
+
+
+label {
+	font-family: 'Orbitron';
+	display: block;
+	font-size: 1.5rem;
+	margin-bottom: 10px;
+}
+
+input {
+	padding: 5px;
+	border-radius: 10px;
+}
+
+#home-team, #away-team {
+	font-family: 'Orbitron';
+	font-size: 1.5rem;
+	text-align: center;
+	width: 100%;
+}
+
+.btn__register {
+	padding: 10px 30px;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.output__home, .output__away {
+	position: relative;
+	background-color: black;
+    color: #FDF860;
+    font-size: 130px;
+    text-align: center;
+    border-radius: 20px;
+    padding-block: 100px;
+    margin-bottom: 100px;
+    width: 370px;
+	font-family: 'Orbitron';
+}
+
+.output__home {
+	outline: 4px solid #97F5BB;
+	outline-offset: 25px;
+}
+
+.output__away {
+	outline: 4px solid #525DF4;
+	outline-offset: 25px;
+}
+
+.output__home p:nth-of-type(2), .output__away p:nth-of-type(2) {
+	position: absolute;
+	color: white;
+	font-size: 1.875rem;
+	bottom: -45px;
+	left: 50%;
+	background-color: #2C2C2C;
+	transform: translate(-50%);
+	padding: 0 15px;
+	width: max-content;
+}
+
+.btn-wrapper {
+	display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn {
+	width: 90px;
+	aspect-ratio: 1 / 1;
+	border-radius: 20px;
+	border: none;
+	font-size: 1.875rem;
+	color: white;
+	cursor: pointer;
+}
+
+.btn__left {
+	background-color: #97F5BB;
+}
+
+.btn__right {
+	background-color: #525DF4;
+}
+
+.btn__reset {
+	padding: 10px 40px;
+	text-align: center;
+	border-radius: 10px;
+}
