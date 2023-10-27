@@ -21,14 +21,6 @@ img {
 }
 
 /* ========================================================== 
-                        Image Links
-========================================================== */
-
-/* https://source.unsplash.com/random?night sky */
-/* https://source.unsplash.com/random/?Cryptocurrency&1 */
-/* https://picsum.photos/300/300?random=1 */
-
-/* ========================================================== 
                             Fonts
 ========================================================== */
 
@@ -42,12 +34,9 @@ img {
 	src: url('./../fonts/Orbitron-VariableFont_wght.ttf');
 }
 
-/* ========================================================== 
-                Variables / Custom Properties
-========================================================== */
 
 /* ========================================================== 
-                            Body
+                        Body und Wrapper
 ========================================================== */
 
 body {
@@ -94,17 +83,30 @@ body {
     width: 100%;
     z-index: 1;
     border-radius: 20px;
-    margin: 0 auto;
-    margin-block: -2vh;
+    margin: -2vh auto;
 	transition: all 1s ease-in-out;
+}
+
+.overlay__closed {
+	opacity: 0.5;
+	width: 0;
+	right: -100%;
+	bottom: 100%;
+	transition: all 1s 0.5s ease-in-out;
 }
 
 svg {
 	position: absolute;
 	top: 2%;
-	right: 2%;
+	right: 1%;
 	cursor: pointer;
-	fill: #fdf860
+	fill: #fdf860;
+	transition: all 1s ease-in-out;
+}
+
+.svg__open {
+	transform: rotate(45deg);
+	transition: all 1s 0.5s ease-in-out;
 }
 
 form {
@@ -119,6 +121,13 @@ form {
     right: 0;
     flex-direction: column;
     row-gap: 50px;
+	transition: all 0.5s 1s ease-in-out;
+	
+}
+
+.form__closed {
+	opacity: 0;
+	transition: all 0.5s ease-in-out;
 }
 
 
@@ -146,6 +155,13 @@ input {
     font-size: 1rem;
     border-radius: 10px;
     cursor: pointer;
+	background: linear-gradient(45deg, #FDF860 50%, white 50%);
+	text-transform: uppercase;
+	transition: background 1s ease-in-out;
+}
+
+.btn__register:hover {
+	background: linear-gradient(#FDF860 100%, white 0%);
 }
 
 .output__home, .output__away {

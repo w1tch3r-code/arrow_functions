@@ -33,21 +33,35 @@ const resetScore = () => {
 
 closeIcon.addEventListener("click", () => {
 	const overlay = document.querySelector(".overlay");
-    const form = document.querySelector("form");
-	overlay.style.opacity = 0;
-	overlay.style.width = 0;
-	overlay.style.right = "-100%";
-	overlay.style.bottom = "100%";
-	form.style.display = "none";
+	const svg = document.querySelector(".overlay svg");
+	const form = document.querySelector("form");
+
+	overlay.classList.toggle("overlay__closed");
+	form.classList.toggle("form__closed");
+	svg.classList.toggle("svg__open");
 });
 
 const registerTeam = () => {
 	const inputHomeTeam = document.querySelector("#home-team").value;
 	const inputAwayTeam = document.querySelector("#away-team").value;
-    const outputHomeTeam = document.querySelector("#output__home p:nth-of-type(2)");
-    const outputAwayTeam = document.querySelector("#output__away p:nth-of-type(2)");
-    
-    outputHomeTeam.textContent = inputHomeTeam;
-    outputAwayTeam.textContent = inputAwayTeam;
-	
+	const outputHomeTeam = document.querySelector(
+		"#output__home p:nth-of-type(2)"
+	);
+	const outputAwayTeam = document.querySelector(
+		"#output__away p:nth-of-type(2)"
+	);
+
+	if (inputHomeTeam === "" && inputAwayTeam === "") {
+		outputHomeTeam.textContent = 'Home';
+		outputAwayTeam.textContent = 'Away';
+	} else if (inputHomeTeam === "" && inputAwayTeam !== "") {
+		outputHomeTeam.textContent = 'Home';
+		outputAwayTeam.textContent = inputAwayTeam;
+	} else if (inputHomeTeam !== "" && inputAwayTeam === "") {
+		outputHomeTeam.textContent = inputHomeTeam;
+		outputAwayTeam.textContent = 'Away';
+	} else {
+		outputHomeTeam.textContent = inputHomeTeam;
+		outputAwayTeam.textContent = inputAwayTeam;
+	}
 };
