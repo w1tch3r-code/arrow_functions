@@ -25,48 +25,48 @@ img {
 ========================================================== */
 
 @font-face {
-	font-family: 'Lato';
-	src: url('./../fonts/Lato-Regular.ttf');
+	font-family: "Lato";
+	src: url("./../fonts/Lato-Regular.ttf");
 }
 
 @font-face {
-	font-family: 'Orbitron';
-	src: url('./../fonts/Orbitron-VariableFont_wght.ttf');
+	font-family: "Orbitron";
+	src: url("./../fonts/Orbitron-VariableFont_wght.ttf");
 }
-
 
 /* ========================================================== 
                         Body und Wrapper
 ========================================================== */
 
 body {
-	font-family: 'Lato';
-	background-color: #2C2C2C;
+	font-family: "Lato";
+	background-color: #2c2c2c;
 	scroll-behavior: smooth;
 	overflow-x: hidden;
+	padding-inline: 5%;
 }
 
 .wrapper {
 	position: relative;
-    max-width: 1280px;
-    margin: 0 auto;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    min-height: 100vh;
-    padding-block: 10vh;
+	max-width: 1280px;
+	margin: 0 auto;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	min-height: 100vh;
+	padding-block: 10vh;
 }
 
 .score__keeper__wrapper {
-    padding-block: 60px;
-    padding-inline: 165px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 140px;
+	padding-block: 60px;
+	padding-inline: 165px;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 140px;
 }
 
 /* ========================================================== 
@@ -75,15 +75,16 @@ body {
 
 .overlay {
 	position: absolute;
-    background-color: rgb(0 0 0 / 92%);
-    top: 10vh;
-    left: 0;
-    right: 0;
-    bottom: 10vh;
-    width: 100%;
-    z-index: 1;
-    border-radius: 20px;
-    margin: -2vh auto;
+	background-color: rgb(0 0 0 / 92%);
+	top: 8vh;
+	left: 0;
+	right: 0;
+	bottom: 8vh;
+	width: 100%;
+	z-index: 1;
+	border-radius: 20px;
+	margin: -2vh auto;
+	padding-block-start: 20px;
 	transition: all 1s ease-in-out;
 }
 
@@ -91,14 +92,13 @@ body {
 	opacity: 0.5;
 	width: 0;
 	right: -100%;
-	bottom: 100%;
+	top: 8vh;
 	transition: all 1s 0.5s ease-in-out;
 }
 
 svg {
 	position: absolute;
-	top: 2%;
-	right: 1%;
+	right: 20px;
 	cursor: pointer;
 	fill: #fdf860;
 	transition: all 1s ease-in-out;
@@ -111,18 +111,18 @@ svg {
 
 form {
 	display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    flex-wrap: wrap;
-    color: white;
-    position: absolute;
-    top: 16vh;
-    left: 0;
-    right: 0;
-    flex-direction: column;
-    row-gap: 50px;
+	justify-content: flex-end;
+	align-items: center;
+	flex-wrap: wrap;
+	color: white;
+	position: absolute;
+	top: 16vh;
+	left: 0;
+	right: 0;
+	flex-direction: column;
+	row-gap: 50px;
 	transition: all 0.5s 1s ease-in-out;
-	
+	padding-inline: 5%;
 }
 
 .form__closed {
@@ -130,9 +130,8 @@ form {
 	transition: all 0.5s ease-in-out;
 }
 
-
 label {
-	font-family: 'Orbitron';
+	font-family: "Orbitron";
 	display: block;
 	font-size: 1.5rem;
 	margin-bottom: 10px;
@@ -143,8 +142,9 @@ input {
 	border-radius: 10px;
 }
 
-#home-team, #away-team {
-	font-family: 'Orbitron';
+#home-team,
+#away-team {
+	font-family: "Orbitron";
 	font-size: 1.5rem;
 	text-align: center;
 	width: 100%;
@@ -152,48 +152,50 @@ input {
 
 .btn__register {
 	padding: 10px 30px;
-    font-size: 1rem;
-    border-radius: 10px;
-    cursor: pointer;
-	background: linear-gradient(45deg, #FDF860 50%, white 50%);
+	font-size: 1rem;
+	border-radius: 10px;
+	cursor: pointer;
+	background: linear-gradient(45deg, #fdf860 50%, white 50%);
 	text-transform: uppercase;
 	transition: background 1s ease-in-out;
 }
 
 .btn__register:hover {
-	background: linear-gradient(#FDF860 100%, white 0%);
+	background: linear-gradient(#fdf860 100%, white 0%);
 }
 
-.output__home, .output__away {
+.output__home,
+.output__away {
 	position: relative;
 	background-color: black;
-    color: #FDF860;
-    font-size: 130px;
-    text-align: center;
-    border-radius: 20px;
-    padding-block: 100px;
-    margin-bottom: 100px;
-    width: 370px;
-	font-family: 'Orbitron';
+	color: #fdf860;
+	font-size: 130px;
+	text-align: center;
+	border-radius: 20px;
+	padding-block: 100px;
+	margin-bottom: 100px;
+	max-width: 370px;
+	font-family: "Orbitron";
 }
 
 .output__home {
-	outline: 4px solid #97F5BB;
+	outline: 4px solid #97f5bb;
 	outline-offset: 25px;
 }
 
 .output__away {
-	outline: 4px solid #525DF4;
+	outline: 4px solid #525df4;
 	outline-offset: 25px;
 }
 
-.output__home p:nth-of-type(2), .output__away p:nth-of-type(2) {
+.output__home p:nth-of-type(2),
+.output__away p:nth-of-type(2) {
 	position: absolute;
 	color: white;
 	font-size: 1.875rem;
 	bottom: -45px;
 	left: 50%;
-	background-color: #2C2C2C;
+	background-color: #2c2c2c;
 	transform: translate(-50%);
 	padding: 0 15px;
 	width: max-content;
@@ -201,8 +203,8 @@ input {
 
 .btn-wrapper {
 	display: flex;
-    justify-content: center;
-    gap: 15px;
+	justify-content: center;
+	gap: 15px;
 }
 
 .btn {
@@ -216,15 +218,42 @@ input {
 }
 
 .btn__left {
-	background-color: #97F5BB;
+	background-color: #97f5bb;
 }
 
 .btn__right {
-	background-color: #525DF4;
+	background-color: #525df4;
 }
 
 .btn__reset {
 	padding: 10px 40px;
 	text-align: center;
 	border-radius: 10px;
+}
+
+/* ========================================================== 
+                        Media Queries
+========================================================== */
+
+@media screen and (max-width: 576px) {
+	body {
+		padding-inline: 0;
+	}
+	.overlay__closed {
+		right: -95%;
+		top: 1%;
+	}
+	.overlay {
+		padding-block-start: 3%;
+	}
+	svg {
+		right: 3%;
+	}
+	section.section__home,
+	section.section__away {
+		max-width: 75%;
+	}
+	.score__keeper__wrapper {
+		padding-inline: 0;
+	}
 }
